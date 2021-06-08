@@ -9,7 +9,17 @@ const findSpiderMan = array => array.find(array => array.name === "Spiderman");
   // Find Spiderman
   // result should be: {name: "Spiderman", alter_ego: "Peter Parker"}
 
-const doubleArrayValues = array => array.forEach(element => console.log(element + element));
+//const doubleArrayValues = array => array.forEach(element => console.log(element + element));
+///////////////////////////  SOLUTION  ////////////////////////////////////////////////////////////////
+const doubleArrayValues = array => {
+  let newArray = [];
+  array.forEach(number => newArray.push(number * 2));
+  return newArray;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
  
   doubleArrayValues([1, 2, 3]);
   // result should be [2, 4, 6]
