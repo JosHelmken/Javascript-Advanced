@@ -113,34 +113,31 @@ const superheroes = [
   });
 } */
 
-const heroNames = superheroes.map(n => n.name);
+const heroNames = superheroes.map(hero => hero.name);
 //console.log("Superhero names:\n", heroNames);
 
-const lightHeroes = superheroes.filter(p => p.weight < 190);
+const lightHeroes = superheroes.filter(hero => hero.weight < 190);
 //console.log("Superheroes op dieet:\n", lightHeroes)
 
 
-const hero200 = superheroes.filter(
-  p => p.weight === '200').map(
-  n => n.name + ' ' + n.weight + ' pounds'
-  );
+const hero200 = superheroes
+  .filter(hero => hero.weight === '200')
+  .map(hero => hero.name + ' ' + hero.weight + ' pounds');
 
 //console.log(hero200)
 
-const firstApperance = superheroes.map(
-  a => a.name + ': ' + a.first_appearance
-  );
+const firstApperance = superheroes.map(hero => hero.name + ': ' + hero.first_appearance);
 
 //console.log(firstApperance);
 
 const heroesDC = superheroes.filter(
- p => p.publisher === 'DC Comics' 
+ hero => hero.publisher === 'DC Comics' 
 );
 
 //console.log(heroesDC);
 
 const heroesMarvel = superheroes.filter(
-  p => p.publisher === 'Marvel Comics' 
+  hero => hero.publisher === 'Marvel Comics' 
  );
 
  //console.log(heroesMarvel);
